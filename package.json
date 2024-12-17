@@ -1,0 +1,26 @@
+{
+  "name": "outerspace-fullstack-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:cli": "cd cli && npm run dev",
+    "build:cli": "cd cli && npm run build",
+    "start:cli": "cd cli && npm run build && npm run start",
+    "install:cli": "cd cli && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:turbo": "concurrently \"npm run dev:backend\" \"npm run dev:frontend:turbo\"",
+    "dev:backend": "cd packages/backend && npm run dev",
+    "dev:frontend": "cd packages/frontend && npm run dev",
+    "dev:frontend:turbo": "cd packages/frontend && npm run dev:turbo",
+    "build": "cd packages/backend && npm run build && cd ../frontend && npm run build",
+    "test": "cd packages/backend && npm test && cd ../frontend && npm test",
+    "clean": "rimraf node_modules packages/*/node_modules",
+    "install:all": "cd cli && npm install && cd packages/backend && npm install && cd ../frontend && npm install",
+    "install:backend": "cd packages/backend && npm install",
+    "install:frontend": "cd packages/frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "rimraf": "^5.0.0"
+  }
+}
