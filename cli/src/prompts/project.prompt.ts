@@ -9,7 +9,6 @@ const projectQuestions = [
     message: 'Project name:',
     default: 'my-fullstack-app',
     validate: (input: string) => {
-      // Validate project name format (lowercase, numbers, hyphens)
       if (/^[a-z0-9-]+$/.test(input)) {
         return true;
       }

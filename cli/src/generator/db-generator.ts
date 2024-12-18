@@ -30,10 +30,6 @@ export class DatabaseGenerator {
     this.targetDir = path.join(process.cwd(), 'target', projectName);
     this.backendDir = path.join(this.targetDir, 'packages', 'backend');
     this.frontendDir = path.join(this.targetDir, 'packages', 'frontend');
-
-    console.log(chalk.gray('Debug: Templates directory path:', this.templatesDir));
-    console.log(chalk.gray('Debug: Backend directory path:', this.backendDir));
-    console.log(chalk.gray('Debug: Frontend directory path:', this.frontendDir));
   }
 
   private async validateTemplates(): Promise<void> {

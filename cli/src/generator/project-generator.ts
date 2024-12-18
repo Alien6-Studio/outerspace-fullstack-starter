@@ -1,4 +1,3 @@
-// src/generator/project-generator.ts
 import fs from 'fs-extra';
 import path from 'path';
 import chalk from 'chalk';
@@ -16,9 +15,6 @@ export class ProjectGenerator {
     const projectRoot = path.resolve(process.cwd(), '..');
     this.sourceDir = path.join(projectRoot, 'packages');
     this.targetDir = path.join(process.cwd(), 'target', projectName);
-
-    console.log(chalk.gray('Debug: Source directory path:', this.sourceDir));
-    console.log(chalk.gray('Debug: Target directory path:', this.targetDir));
   }
 
   async generate(): Promise<void> {

@@ -11,13 +11,15 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node ./dist/main.js"
+    "start": "node ./dist/main.js",
+    "shadcn-ui": "shadcn-ui"
   },
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^11.1.0",
     "fs-extra": "^11.2.0",
-    "inquirer": "^9.2.12"
+    "inquirer": "^9.3.7",
+    "shadcn-ui": "^0.9.4"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
